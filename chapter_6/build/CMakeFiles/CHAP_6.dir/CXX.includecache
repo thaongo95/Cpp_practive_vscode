@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/thao/Work/seeProjects/chapter_6/card.h
+string
+-
+iostream
+-
+
+/home/thao/Work/seeProjects/chapter_6/container.cpp
+container.h
+/home/thao/Work/seeProjects/chapter_6/container.h
+
+/home/thao/Work/seeProjects/chapter_6/container.h
+vector
+-
+string
+-
+card.h
+/home/thao/Work/seeProjects/chapter_6/card.h
+
+/home/thao/Work/seeProjects/chapter_6/main.cpp
+container.h
+/home/thao/Work/seeProjects/chapter_6/container.h
+card.h
+/home/thao/Work/seeProjects/chapter_6/card.h
+
