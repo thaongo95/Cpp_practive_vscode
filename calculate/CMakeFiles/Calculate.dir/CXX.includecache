@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/thao/Work/seeProjects/calculate/add.cpp
+
+/home/thao/Work/seeProjects/calculate/main.cpp
+iostream
+-
+add.cpp
+/home/thao/Work/seeProjects/calculate/add.cpp
+mul.cpp
+/home/thao/Work/seeProjects/calculate/mul.cpp
+
+/home/thao/Work/seeProjects/calculate/mul.cpp
+
