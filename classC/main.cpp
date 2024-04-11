@@ -3,6 +3,8 @@
 #include "friend_class/thao.cpp"
 #include "deepcopy.h"
 #include "shallowcopy.h"
+#include "staticmember.h"
+#include "staticfunction.cpp"
 
 int main(){
 
@@ -32,4 +34,24 @@ int main(){
     deep_class1.show_class();
     Deep_Class deep_class2(deep_class1);
     deep_class2.show_class();
+    std::cout << "#####################" << std::endl;
+    // static member
+    std::cout << "Static member is the class member that every object can be use" << std::endl;
+    House house(5.5, 25, 3);
+    house.set_room(20);
+    House house1;
+    House house2;
+    House house3;
+    std::cout << "room number of house: " << house.get_room() << std::endl;
+    std::cout << "size of house: " << house.get_size() << std::endl;
+    std::cout << "high of house: " << house.get_hight() << std::endl;
+
+    // static member function
+    B6 thong;
+    B6 huy("Huy");
+    B6 huong("Huong");
+    B6 six;
+    std::cout << "people sum = " << B6::T << std::endl;
+    std::cout << B6::get_current_name(thong) << std::endl; 
+    std::cout << B6::get_current_name(huy) << std::endl;
 }
