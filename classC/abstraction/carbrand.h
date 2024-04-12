@@ -6,7 +6,7 @@
 #include <iostream>
 
 /*
-    abstraction refers to the concept of hiding the complex implemnetation 
+    Abstraction refers to the concept of hiding the complex implemnetation 
     details and showing only the essential features of an object.
     Encapsulation, on the other hand, involves bundling the data and methods
     that operate on the data and methos that restricting access to some of the
