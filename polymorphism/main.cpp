@@ -2,6 +2,7 @@
 #include "runtime/baseclass.h"
 #include "runtime/baseclass.cpp"
 #include "runtime/derivedclass.h"
+#include "virtualfunction/employee.h"
 
 int main(){
 
@@ -77,5 +78,12 @@ int main(){
   shape = &triangle;
   shape->get_area();
   std::cout << std::endl;
+
+  Employee *employee;
+  Manager A;
+  employee = &A;
+  employee->raise_salary(0.2);
+  std::cout << employee->get_salary() << std::endl;
+
 
 }
