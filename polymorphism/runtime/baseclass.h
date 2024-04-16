@@ -12,9 +12,7 @@ class Baseclass{
 class Shape{
 
 public:
-    virtual void get_area(){
-        std::cout << "Calculation the Shape Area" << std::endl;
-    }
+    virtual void get_area();
 };
 
 #endif

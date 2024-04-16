@@ -1,6 +1,5 @@
 #include "compiletime/complex.h"
 #include "runtime/baseclass.h"
-#include "runtime/baseclass.cpp"
 #include "runtime/derivedclass.h"
 #include "virtualfunction/employee.h"
 
