@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thao/Work/seeProjects/chapter_6
+CMAKE_SOURCE_DIR = /home/thao/Work/seeProjects/functionC
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thao/Work/seeProjects/chapter_6/build
+CMAKE_BINARY_DIR = /home/thao/Work/seeProjects/functionC/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thao/Work/seeProjects/chapter_6/build/CMakeFiles /home/thao/Work/seeProjects/chapter_6/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thao/Work/seeProjects/functionC/build/CMakeFiles /home/thao/Work/seeProjects/functionC/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thao/Work/seeProjects/chapter_6/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thao/Work/seeProjects/functionC/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CHAP_6
+# Target rules for targets named RUN
 
 # Build rule for target.
-CHAP_6: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CHAP_6
-.PHONY : CHAP_6
+RUN: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RUN
+.PHONY : RUN
 
 # fast build rule for target.
-CHAP_6/fast:
-	$(MAKE) -f CMakeFiles/CHAP_6.dir/build.make CMakeFiles/CHAP_6.dir/build
-.PHONY : CHAP_6/fast
+RUN/fast:
+	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/build
+.PHONY : RUN/fast
 
 main.o: main.cpp.o
 
@@ -129,7 +129,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/CHAP_6.dir/build.make CMakeFiles/CHAP_6.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -138,7 +138,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/CHAP_6.dir/build.make CMakeFiles/CHAP_6.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -147,8 +147,35 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/CHAP_6.dir/build.make CMakeFiles/CHAP_6.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+sources/frenchdeck.o: sources/frenchdeck.cpp.o
+
+.PHONY : sources/frenchdeck.o
+
+# target to build an object file
+sources/frenchdeck.cpp.o:
+	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/sources/frenchdeck.cpp.o
+.PHONY : sources/frenchdeck.cpp.o
+
+sources/frenchdeck.i: sources/frenchdeck.cpp.i
+
+.PHONY : sources/frenchdeck.i
+
+# target to preprocess a source file
+sources/frenchdeck.cpp.i:
+	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/sources/frenchdeck.cpp.i
+.PHONY : sources/frenchdeck.cpp.i
+
+sources/frenchdeck.s: sources/frenchdeck.cpp.s
+
+.PHONY : sources/frenchdeck.s
+
+# target to generate assembly for a file
+sources/frenchdeck.cpp.s:
+	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/sources/frenchdeck.cpp.s
+.PHONY : sources/frenchdeck.cpp.s
 
 # Help Target
 help:
@@ -158,10 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... CHAP_6"
+	@echo "... RUN"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... sources/frenchdeck.o"
+	@echo "... sources/frenchdeck.i"
+	@echo "... sources/frenchdeck.s"
 .PHONY : help
 
 

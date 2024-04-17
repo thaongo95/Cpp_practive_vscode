@@ -1,6 +1,6 @@
-#include "frenchdeck.h"
-#include "frenchdeck.cpp"
-#include "overloading_func.cpp"
+#include "include/frenchdeck.h"
+#include "sources/overloading_func.cpp"
+#include "sources/string_functions.cpp"
 
 void over_loading(){
     std::cout << "mul of two int: " << mul(2, 4) << std::endl;
