@@ -1,3 +1,0 @@
-/home/thao/Work/seeProjects/calculate/CMakeFiles/rebuild_cache.dir
-/home/thao/Work/seeProjects/calculate/CMakeFiles/edit_cache.dir
-/home/thao/Work/seeProjects/calculate/CMakeFiles/Calculate.dir
