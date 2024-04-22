@@ -1,5 +1,6 @@
 #include "bookshop.h"
 #include <fstream>
+#include <iomanip>
 // #include <iostream>
 
 Book get_book_from_line(std::string line){
@@ -16,7 +17,8 @@ Book get_book_from_line(std::string line){
         } 
     }
     book.init(features[0],features[1],features[2],features[3],features[4],
-              std::stoi(features[5]),std::stoi(features[6]),std::stod(features[7]),std::stod(temp));
+              std::stoi(features[5]),std::stoi(features[6]),std::stod(features[7]),
+              std::stod(features[8]),std::stoi(temp));
     return book;
 }
 
@@ -24,33 +26,27 @@ BookShop::BookShop()
 {
     std::ifstream fin;
     std::string line;
-    fin.open("books.txt");
+    fin.open("bookstore.txt");
     while (std::getline(fin, line)){
         Book book;
         book = get_book_from_line(line);
         books.push_back(book);
     }
     fin.close();
-    fin.open("available_num.txt");
-    std::string temp;
-    for (int i{0}; i<books.size(); i++){
-        std::getline(fin, line);
-        for (size_t j{books[i].get_id().size()+1}; j<line.length();j++){
-            temp+=line[j];
-        }
-        books[i].number_available = std::stoi(temp);
-        temp="";
-    }
-    fin.close();
+    
 }
 
 BookShop::~BookShop()
 { 
     std::ofstream fout;
     std::string line;
-    fout.open("available_num.txt");
+    fout.open("bookstore.txt");
     for (int i{0}; i<books.size();i++){
-        line = books[i].get_id() + "-" + std::to_string(books[i].number_available);
+        line = books[i].get_id() + "-" + books[i].get_name() + "-" + 
+            books[i].get_author() + "-" + books[i].get_type() + "-" +
+            books[i].get_language() + "-" + std::to_string(books[i].get_publish_year())
+             + "-" + std::to_string(books[i].get_pages()) + "-" + std::to_string(books[i].get_score())
+             + "-" + std::to_string(books[i].get_price()) + "-" + std::to_string(books[i].get_number());
         fout << line << std::endl;
     }
     fout.close();
@@ -60,12 +56,23 @@ void BookShop::append_data()
 {
     std::ofstream fout;
     std::string line;
-    fout.open("books.txt", std::ios::app);   //app is append
+    std::cout << "Input Format: NAME-AUTHOR-TYPE-LANGUAGE-YEAR-PAGES-SCORE-PRICE-NUMBERS"<< std::endl;
+    fout.open("bookstore.txt", std::ios::app);   //app is append
     while (fout){
         std::getline(std::cin, line);
+        std::string id_calculated;
+        id_calculated += line[0];
+        for (int i=0; i< line.size(); i++){
+            if ((line[i]=='-')&&(id_calculated.size()<8)){
+                id_calculated+= line[i+1];
+            }
+        }
         if (line=="-1")
             break;
-        fout << line << std::endl;
+        fout << id_calculated + "-" +line << std::endl;
+        Book book;
+        book = get_book_from_line(id_calculated + "-" +line);
+        books.push_back(book);
     }
     fout.close();
 }
@@ -79,7 +86,7 @@ void BookShop::show_books_info()
 
 void BookShop::purchase()
 {
-    std::vector<Book> waiting_list;
+    std::vector<Book*> waiting_list;
     std::vector<int> purchase_number;
     double total_price{0};
     while(true){
@@ -89,13 +96,14 @@ void BookShop::purchase()
 
         for (int i{0}; i<books.size(); i++){
             if (book_id==books[i].get_id()){
-                waiting_list.push_back(books[i]);
-                std::cout << "This book has " << books[i].number_available << " available" << std::endl;
+                waiting_list.push_back(&books[i]);
+                std::cout << "This book has " << books[i].get_number() << " available" << std::endl;
             }
         }
         std::cout << "How many copies of this book you want to buy:" << std::endl;
         std::getline(std::cin, number);
-        if (std::stoi(number)>waiting_list[waiting_list.size()-1].number_available){
+        Book * book_temp = waiting_list[waiting_list.size()-1];
+        if (std::stoi(number) > book_temp->get_number()){
             std::cout << "out of stock" << std::endl;
             waiting_list.pop_back();
         }
@@ -112,9 +120,9 @@ void BookShop::purchase()
     std::cout << "########################################################" << std::endl;
     std::cout << "You selected " << waiting_list.size() << " books" << std::endl;
     for (int i{0}; i<waiting_list.size(); i++){
-        std::cout << "   " << i << ". " << waiting_list[i].get_name() << "  " << purchase_number[i] 
-                  << "   " <<  purchase_number[i]*waiting_list[i].get_price() << std::endl;
-        total_price += purchase_number[i]*waiting_list[i].get_price();
+        std::cout << "   " << i << ". " << waiting_list[i]->get_name() << "  " << purchase_number[i] 
+                  << "   " <<  purchase_number[i]*waiting_list[i]->get_price() << std::endl;
+        total_price += purchase_number[i]*waiting_list[i]->get_price();
     }
     std::cout << "    Total Price: " << total_price << std::endl;
 
@@ -123,7 +131,7 @@ void BookShop::purchase()
     std::getline(std::cin, purchase_flag);
     if (purchase_flag=="yes"){
         for (int i{0}; i<waiting_list.size(); i++){
-            waiting_list[i].number_available -= purchase_number[i];
+            waiting_list[i]->set_number(waiting_list[i]->get_number()-purchase_number[i]);
         }
         std::cout << "Purchase Completed!" << std::endl;
     }

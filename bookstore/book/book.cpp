@@ -1,7 +1,7 @@
 #include "book.h"
 
-void Book::init(std::string id,std::string name, std::string author, std::string type,
-            std::string language, int publish_year, int pages, double score, double price){
+void Book::init(std::string id, std::string name, std::string author, std::string type, std::string language
+              , int publish_year, int pages, double score, double price, int number_available){
     this->id=id;
     this->name=name;
     this->author=author;
@@ -11,6 +11,7 @@ void Book::init(std::string id,std::string name, std::string author, std::string
     this->score=score;
     this->pages=pages;
     this->price=price;
+    this->number_available=number_available;
 }
 
 void Book::book_info()
@@ -32,6 +33,11 @@ std::string Book::get_type()
     return type;
 }
 
+std::string Book::get_language()
+{
+    return language;
+}
+
 std::string Book::get_id()
 {
     return id;
@@ -42,9 +48,24 @@ std::string Book::get_name()
     return name;
 }
 
+std::string Book::get_author()
+{
+    return author;
+}
+
 double Book::get_price()
 {
     return price;
+}
+
+int Book::get_number()
+{
+    return number_available;
+}
+
+void Book::set_number(int number)
+{
+    this->number_available = number;
 }
 
 int Book::get_pages()

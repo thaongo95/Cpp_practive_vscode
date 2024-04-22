@@ -8,5 +8,6 @@ int main(){
     BookShop bookshop;
     bookshop.show_books_info();
     std::cout << std::endl;
-    bookshop.purchase();
+    // bookshop.purchase();
+    bookshop.append_data();
 }
