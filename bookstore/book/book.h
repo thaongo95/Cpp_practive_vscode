@@ -24,6 +24,7 @@ public:
               , int publish_year, int pages, double score, double price, int number_available);
     void init();
     void book_info();
+    void book_info_short();
     std::string get_id();
     std::string get_name();
     std::string get_author();

@@ -14,6 +14,12 @@
 # EXTERNAL cache entries
 ########################
 
+//Value Computed by CMake
+BookShop_BINARY_DIR:STATIC=/home/thao/Work/seeProjects/bookstore/build
+
+//Value Computed by CMake
+BookShop_SOURCE_DIR:STATIC=/home/thao/Work/seeProjects/bookstore
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -145,7 +151,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=RUN
+CMAKE_PROJECT_NAME:STATIC=BookShop
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib

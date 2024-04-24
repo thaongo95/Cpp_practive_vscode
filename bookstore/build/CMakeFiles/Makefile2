@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = /home/thao/Work/seeProjects/bookstore/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/RUN.dir/all
+all: CMakeFiles/BookShop.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/RUN.dir/clean
+clean: CMakeFiles/BookShop.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/RUN.dir
+# Target rules for target CMakeFiles/BookShop.dir
 
 # All Build rule for target.
-CMakeFiles/RUN.dir/all:
-	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/depend
-	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thao/Work/seeProjects/bookstore/build/CMakeFiles --progress-num=1,2,3,4 "Built target RUN"
-.PHONY : CMakeFiles/RUN.dir/all
+CMakeFiles/BookShop.dir/all:
+	$(MAKE) -f CMakeFiles/BookShop.dir/build.make CMakeFiles/BookShop.dir/depend
+	$(MAKE) -f CMakeFiles/BookShop.dir/build.make CMakeFiles/BookShop.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/thao/Work/seeProjects/bookstore/build/CMakeFiles --progress-num=1,2,3,4 "Built target BookShop"
+.PHONY : CMakeFiles/BookShop.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/RUN.dir/rule: cmake_check_build_system
+CMakeFiles/BookShop.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thao/Work/seeProjects/bookstore/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/RUN.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/BookShop.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thao/Work/seeProjects/bookstore/build/CMakeFiles 0
-.PHONY : CMakeFiles/RUN.dir/rule
+.PHONY : CMakeFiles/BookShop.dir/rule
 
 # Convenience name for target.
-RUN: CMakeFiles/RUN.dir/rule
+BookShop: CMakeFiles/BookShop.dir/rule
 
-.PHONY : RUN
+.PHONY : BookShop
 
 # clean rule for target.
-CMakeFiles/RUN.dir/clean:
-	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/clean
-.PHONY : CMakeFiles/RUN.dir/clean
+CMakeFiles/BookShop.dir/clean:
+	$(MAKE) -f CMakeFiles/BookShop.dir/build.make CMakeFiles/BookShop.dir/clean
+.PHONY : CMakeFiles/BookShop.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

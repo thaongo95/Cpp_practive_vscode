@@ -33,3 +33,15 @@ JCfe2381-Jare Eyre-Charlotte Bronte-fiction-english-2012-374-8.300000-10.990000-
 TFfe2371-The Great Gatsby-F.Scrott Fitzgerald-fiction-english-2002-376-7.900000-10.990000-30
 TAfe2581-The Little Prince-Antoine de Saint-fiction-english-2002-544-8.600000-11.990000-30
 TDfe2371-The Da Vinci Code-Dan Brown-fiction-english-2002-374-7.900000-10.990000-30
+DMnf2461-Don Quixote-Migual de Cervantes-novel-franch-2004-430-6.700000-10.990000-20
+ALne2371-Alice's Adventures in Wonderland-Lewis Carroll-novel-english-2005-340-7.800000-11.990000-30
+TMne2471-The Andventure of Huckleberry Finn-Mark Twain-novel-english-2006-432-7.600000-10.990000-20
+TRne2371-Treasure Island-Robertt Louis Stevenson-novel-english-2008-389-7.500000-12.990000-15
+MNne2471-My Scarlet Letter-Nathaniel Hawthorne-novel-english-2005-450-7.400000-10.990000-15
+GJne2371-Gulliver's Travels-Jonathan Swift-novel-english-2006-390-7.800000-12.990000-15
+CCne1278-Christmas Carol-Charles Dicken-novel-english-1990-239-7.200000-8.990000-20
+DCne2471-David Copperfield-Charles Dicken-novel-english-2002-430-7.900000-10.990000-20
+LLne2481-Little Women-Louisa May Alcolt-novel-english-2003-425-8.300000-10.990000-30
+GCne2378-Great Expectations-Charles Dickens-novel-english-2005-389-7.400000-8.990000-20
+DBne2471-Dracula-Bram Stoker-novel-english-2004-467-7.200000-12.990000-10
+WLne1371-War and Peace-Leo tolstoy-novel-english-1990-397-7.700000-10.990000-30

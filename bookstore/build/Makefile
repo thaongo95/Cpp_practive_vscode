@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named RUN
+# Target rules for targets named BookShop
 
 # Build rule for target.
-RUN: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 RUN
-.PHONY : RUN
+BookShop: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BookShop
+.PHONY : BookShop
 
 # fast build rule for target.
-RUN/fast:
-	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/build
-.PHONY : RUN/fast
+BookShop/fast:
+	$(MAKE) -f CMakeFiles/BookShop.dir/build.make CMakeFiles/BookShop.dir/build
+.PHONY : BookShop/fast
 
 book/book.o: book/book.cpp.o
 
@@ -129,7 +129,7 @@ book/book.o: book/book.cpp.o
 
 # target to build an object file
 book/book.cpp.o:
-	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/book/book.cpp.o
+	$(MAKE) -f CMakeFiles/BookShop.dir/build.make CMakeFiles/BookShop.dir/book/book.cpp.o
 .PHONY : book/book.cpp.o
 
 book/book.i: book/book.cpp.i
@@ -138,7 +138,7 @@ book/book.i: book/book.cpp.i
 
 # target to preprocess a source file
 book/book.cpp.i:
-	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/book/book.cpp.i
+	$(MAKE) -f CMakeFiles/BookShop.dir/build.make CMakeFiles/BookShop.dir/book/book.cpp.i
 .PHONY : book/book.cpp.i
 
 book/book.s: book/book.cpp.s
@@ -147,7 +147,7 @@ book/book.s: book/book.cpp.s
 
 # target to generate assembly for a file
 book/book.cpp.s:
-	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/book/book.cpp.s
+	$(MAKE) -f CMakeFiles/BookShop.dir/build.make CMakeFiles/BookShop.dir/book/book.cpp.s
 .PHONY : book/book.cpp.s
 
 bookshop/bookshop.o: bookshop/bookshop.cpp.o
@@ -156,7 +156,7 @@ bookshop/bookshop.o: bookshop/bookshop.cpp.o
 
 # target to build an object file
 bookshop/bookshop.cpp.o:
-	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/bookshop/bookshop.cpp.o
+	$(MAKE) -f CMakeFiles/BookShop.dir/build.make CMakeFiles/BookShop.dir/bookshop/bookshop.cpp.o
 .PHONY : bookshop/bookshop.cpp.o
 
 bookshop/bookshop.i: bookshop/bookshop.cpp.i
@@ -165,7 +165,7 @@ bookshop/bookshop.i: bookshop/bookshop.cpp.i
 
 # target to preprocess a source file
 bookshop/bookshop.cpp.i:
-	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/bookshop/bookshop.cpp.i
+	$(MAKE) -f CMakeFiles/BookShop.dir/build.make CMakeFiles/BookShop.dir/bookshop/bookshop.cpp.i
 .PHONY : bookshop/bookshop.cpp.i
 
 bookshop/bookshop.s: bookshop/bookshop.cpp.s
@@ -174,7 +174,7 @@ bookshop/bookshop.s: bookshop/bookshop.cpp.s
 
 # target to generate assembly for a file
 bookshop/bookshop.cpp.s:
-	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/bookshop/bookshop.cpp.s
+	$(MAKE) -f CMakeFiles/BookShop.dir/build.make CMakeFiles/BookShop.dir/bookshop/bookshop.cpp.s
 .PHONY : bookshop/bookshop.cpp.s
 
 main.o: main.cpp.o
@@ -183,7 +183,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/BookShop.dir/build.make CMakeFiles/BookShop.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -192,7 +192,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/BookShop.dir/build.make CMakeFiles/BookShop.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -201,7 +201,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/RUN.dir/build.make CMakeFiles/RUN.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/BookShop.dir/build.make CMakeFiles/BookShop.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -212,7 +212,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... RUN"
+	@echo "... BookShop"
 	@echo "... book/book.o"
 	@echo "... book/book.i"
 	@echo "... book/book.s"

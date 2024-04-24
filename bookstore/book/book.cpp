@@ -28,6 +28,11 @@ void Book::book_info()
     std::cout << "   Number Available: " << number_available << std::endl;
 }
 
+void Book::book_info_short()
+{
+    std::cout << id << " - " << price << " - " << number_available << " | \"" << name << "\" - " << author << std::endl;
+}
+
 std::string Book::get_type()
 {
     return type;
