@@ -248,7 +248,7 @@ void BookShop::author_filter(std::vector<Book> &list)
 void BookShop::type_filter(std::vector<Book> &list)
 {
     std::string typeInput;
-    std::cout << "Input Name of the author you want to find: "<< std::endl;
+    std::cout << "Input Name of the type you want to find: "<< std::endl;
     std::getline(std::cin, typeInput);
     for (auto book:books){
         size_t found = book.get_type().find(typeInput);
@@ -261,7 +261,7 @@ void BookShop::type_filter(std::vector<Book> &list)
 void BookShop::language_filter(std::vector<Book> &list)
 {
     std::string languageInput;
-    std::cout << "Input Name of the author you want to find: "<< std::endl;
+    std::cout << "Input Name of the language you want to find: "<< std::endl;
     std::getline(std::cin, languageInput);
     for (auto book:books){
         size_t found = book.get_language().find(languageInput);
