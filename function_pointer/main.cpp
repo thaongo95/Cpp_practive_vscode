@@ -22,4 +22,6 @@ int main(){
     changeSeries(series1, shiftLeft<0>);
     changeSeries(series1, shiftLeft<-1>);
     changeSeries(series1, shiftLeft<5>);
+    changeSeries(series1, [](const int& value){ return (char)(value+3);});
+    
 }
